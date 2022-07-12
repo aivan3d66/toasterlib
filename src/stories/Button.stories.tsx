@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import Button from '../components/Button'
 
 export default {
-  title: 'Project/Components/Button',
+  title: 'Project/Components/Index',
   component: Button,
   argTypes: {
     name: {
@@ -25,5 +25,5 @@ export const ButtonExample = Template.bind({})
 ButtonExample.args = {
   name: 'Click!',
   status: 'ok',
-  onClick: action('Button was clicked'),
+  onClick: action('Index was clicked'),
 }
