@@ -1,11 +1,19 @@
-import * as React from 'react'
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
 
-export type ButtonPropsType = {
-  label: string
-}
+type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+type ButtonPropsType = DefaultButtonPropsType & {}
 
-export const Button = (props: ButtonPropsType) => {
-  return <button>{props.label}</button>
+const Button: React.FC<ButtonPropsType> = (
+  {
+    className,
+    ...restProps
+  },
+) => {
+  return (
+    <button
+      {...restProps}
+    />
+  )
 }
 
 export default Button
