@@ -10,7 +10,7 @@
       "es2017"
     ],
     "sourceMap": true,
-    "allowJs": false,
+    "allowJs": true,
     "jsx": "react",
     "declaration": true,
     "moduleResolution": "node",
@@ -27,7 +27,7 @@
     "noEmit": true,
     "declarationDir": "types",
     "typeRoots": ["./types", "node_modules/@types"],
-//    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true
   },
   "include": [
     "src"
