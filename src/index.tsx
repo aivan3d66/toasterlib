@@ -1,3 +1,3 @@
-import Button, { ButtonPropsType } from './components/Button'
+import { Button, IButtonPropsType } from './components/Button'
 
-export { Button, ButtonPropsType }
+export { Button, IButtonPropsType }
