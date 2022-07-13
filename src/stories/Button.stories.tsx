@@ -1,10 +1,10 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import Button from '../components/Button'
+import { Button } from '../components/Button'
 
 export default {
-  title: 'Project/Components/Index',
+  title: 'Project/Components/Button',
   component: Button,
   argTypes: {
     name: {
