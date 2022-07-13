@@ -1,5 +1,5 @@
-import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
-import Button from './../Button/component'
+import React from 'react'
+import { ButtonContainer } from './component'
 
 const colors = {
   green: '#37E29A',
@@ -8,19 +8,19 @@ const colors = {
   yellow: '#F4E048',
 }
 
-export default ({ name, status = 'ok', ...restProps }: ButtonPropsType) => {
+export const Button: React.FC<IButtonPropsType> = ({ name, status = 'ok', ...restProps }) => {
   const schema = status === 'err' ? colors.red : status === 'warn' ? colors.yellow : status === 'info' ? colors.purple : colors.green
 
   return (
-    <Button schema={schema} {...restProps}>
+    <ButtonContainer color={schema} {...restProps}>
       {name}
-    </Button>
+    </ButtonContainer>
   )
 }
 
 type BtnStatusType = 'ok' | 'warn' | 'info' | 'err'
-type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
-export type ButtonPropsType = DefaultButtonPropsType & {
+
+export interface IButtonPropsType extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   name?: string,
   status?: BtnStatusType,
 }

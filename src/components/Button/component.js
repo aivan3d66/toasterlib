@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Button = styled.button`
+export const ButtonContainer = styled.button`
   min-width: 100px;
   margin: auto;
   padding: 10px;
@@ -9,7 +9,7 @@ const Button = styled.button`
   font: normal normal normal 18px/22px "Arial", sans-serif;
   border: 1px solid #707070;
   border-radius: 5px;
-  background-color: ${props => props.schema};
+  background-color: ${props => props.color};
   cursor: pointer;
   transition: 0.3s;
 
@@ -21,5 +21,3 @@ const Button = styled.button`
     opacity: 0.5;
   }
 `
-
-export default Button
