@@ -25,17 +25,23 @@
     "strict": true,
     "resolveJsonModule": true,
     "noEmit": true,
+    "checkJs": false,
     "declarationDir": "types",
-    "typeRoots": ["./types", "node_modules/@types"],
+    "typeRoots": [
+      "./types",
+      "node_modules/@types"
+    ],
     "emitDeclarationOnly": true
   },
   "include": [
-    "src"
+    "src",
+    "src/components",
+    "src/custom.d.ts"
   ],
   "exclude": [
     "node_modules",
     "build",
     "dist",
-    "rollup.config.js",
+    "rollup.config.js"
   ]
 }
