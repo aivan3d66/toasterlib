@@ -61,6 +61,7 @@
     "@types/styled-components": "^5.1.25",
     "browserify": "latest",
     "prettier": "^2.7.1",
+    "react-icons": "^4.4.0",
     "styled-components": "^5.3.5"
   }
 }
