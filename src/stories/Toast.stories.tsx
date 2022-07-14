@@ -47,8 +47,6 @@ export const ToastExample = Template.bind({})
 ToastExample.args = {
   toastId: '1',
   status: 'ok',
-  title: 'Title',
-  description: 'Description',
   animation: 'default',
   timeout: 5000,
   toastMargins: '20px',
