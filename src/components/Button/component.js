@@ -9,7 +9,7 @@ export const ButtonContainer = styled.button`
   font: normal normal normal 18px/22px "Arial", sans-serif;
   border: 1px solid #707070;
   border-radius: 5px;
-  background-color: ${props => props.color};
+  background-color: ${({color}) => color};
   cursor: pointer;
   transition: 0.3s;
 
