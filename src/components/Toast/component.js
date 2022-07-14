@@ -8,8 +8,8 @@ export const ToastWrapper = styled.div`
   min-height: 50px;
   max-height: 120px;
   padding: 20px 30px;
-  color: ${({ colorSchema }) => colorSchema.textColor};
-  background-color: ${({ colorSchema }) => colorSchema.backgroundColor};
+  color: ${({ theme }) => theme.textColor};
+  background-color: ${({ theme }) => theme.backgroundColor};
   border: 1px solid transparent;
   box-shadow: 4px 4px 8px #00000029;
   border-radius: 24px;
@@ -28,12 +28,14 @@ export const ToastIcon = styled.div`
 
 export const ToastButton = styled.button`
   margin: 0 0 auto 0;
+  color: ${({ theme }) => theme.textColor};
+  font-size: 26px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 
-  img {
-    width: 24px;
+  &:hover {
+    opacity: 0.5;
   }
 `
 
@@ -50,6 +52,7 @@ export const ToastTitle = styled.p`
   width: 100%;
   padding: 2px 0;
   margin: 10px 0;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
   text-align: left;
