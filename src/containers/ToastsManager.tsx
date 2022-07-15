@@ -83,7 +83,7 @@ export class ToastManager {
 
 export type ToastStatusType = 'ok' | 'warn' | 'info' | 'err'
 export type ToastPositionType = 'top-right' | 'top-left' | 'bottom-left' | 'bottom-right'
-export type ToastAnimation = 'transition' | 'slideInLeft' | 'slideInRight'
+export type ToastAnimationType = 'transition' | 'flip' | 'zoomIn'
 export type ContainerPositionType = {
   top?: string,
   right?: string
@@ -94,7 +94,7 @@ export type ContainerPositionType = {
 interface ToastOptions {
   toastPosition?: ToastPositionType,
   toastMargins?: string,
-  animation?: ToastAnimation,
+  animation?: ToastAnimationType,
   id?: string,
   status?: ToastStatusType,
   title?: string,
