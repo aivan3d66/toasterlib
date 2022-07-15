@@ -9,22 +9,34 @@ const transition = keyframes`
     opacity: 1;
   }
 `
-const slideInLeft = keyframes`
+const flip = keyframes`
   from {
-    margin-left: 100%;
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
   }
-
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
   to {
-    margin-left: 0;
+    transform: perspective(400px);
   }
 `
-const slideInRight = keyframes`
+const zoomIn = keyframes`
   from {
-    margin-right: 100%;
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
   }
-
-  to {
-    margin-right: 0;
+  50% {
+    opacity: 1;
   }
 `
 
@@ -44,7 +56,7 @@ export const ToastWrapper = styled.div`
   box-shadow: 4px 4px 8px #00000029;
   border-radius: 24px;
   box-sizing: border-box;
-  animation-name: ${({color}) => color === 'slideInLeft' ? slideInLeft : color === 'slideInRight' ? slideInRight : transition};
+  animation-name: ${({color}) => color === 'flip' ? flip : color === 'zoomIn' ? zoomIn : transition};
   animation-duration: 1s;
 `
 
