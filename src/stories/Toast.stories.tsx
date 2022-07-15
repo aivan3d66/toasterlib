@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Toast } from '../components/Toast/Toast'
 import { action } from '@storybook/addon-actions'
+import Toast from '../components/Toast/Toast'
 
 export default {
   title: 'Project/Components/Toast',
