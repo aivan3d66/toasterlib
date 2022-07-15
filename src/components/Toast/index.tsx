@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { ToastButton, ToastDescription, ToastIcon, ToastInfo, ToastTitle, ToastWrapper } from './component'
 import { VscChromeClose } from 'react-icons/vsc'
-import { ToastAnimation, ToastPositionType, ToastStatusType } from '../../containers/ToastsManager'
+import { ToastAnimationType, ToastPositionType, ToastStatusType } from '../../containers/ToastsManager'
 import { DEFAULT_TOASTS } from '../../constants/constants'
 
 export const Toast: React.FC<IToastPropsType> = (
@@ -63,7 +63,7 @@ export const Toast: React.FC<IToastPropsType> = (
 
 export interface IToastPropsType {
   toastPosition?: ToastPositionType,
-  animation?: ToastAnimation,
+  animation?: ToastAnimationType,
   toastColor?: string,
   toastMargins?: string,
   id?: string;
