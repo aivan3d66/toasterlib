@@ -4,7 +4,7 @@ import { VscChromeClose } from 'react-icons/vsc'
 import { ToastAnimationType, ToastStatusType } from '../../containers/ToastsManager'
 import { DEFAULT_TOASTS } from '../../constants/constants'
 
-export const Toast: React.FC<IToastPropsType> = (
+const Toast: React.FC<IToastPropsType> = (
   {
     animation,
     status,
@@ -72,3 +72,5 @@ export interface IToastPropsType {
   duration?: number;
   deleteToast: () => void;
 }
+
+export default Toast

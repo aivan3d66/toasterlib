@@ -42,3 +42,5 @@ type ToastPropertiesType = {
   inform: DefaultToastType,
   error: DefaultToastType
 }
+
+export default DEFAULT_TOASTS

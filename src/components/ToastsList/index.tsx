@@ -2,7 +2,7 @@ import React from 'react'
 import { ToastsListWrapper } from './component'
 import { ContainerPositionType } from '../../containers/ToastsManager'
 
-export const ToastsList: React.FC<IToastListPropsType> = (
+const ToastsList: React.FC<IToastListPropsType> = (
   {
     containerPosition,
     toastsList,
@@ -19,3 +19,5 @@ export interface IToastListPropsType {
   containerPosition: ContainerPositionType,
   toastsList: Array<JSX.Element>
 }
+
+export default ToastsList
