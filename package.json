@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/aivan3d66"
   },
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "React Toast library",
   "author": "aivan3d66",
   "license": "MIT",
@@ -65,6 +65,7 @@
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-url": "^7.0.0",
     "@types/browserify": "latest",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.1",
     "@types/styled-components": "^5.1.25",
     "browserify": "latest",
     "prettier": "^2.7.1",

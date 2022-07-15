@@ -34,7 +34,7 @@
     "emitDeclarationOnly": true
   },
   "include": [
-    "src",
+    "src/**/*",
     "src/components",
     "src/custom.d.ts"
   ],
@@ -42,7 +42,8 @@
     "node_modules",
     "build",
     "dist",
-    "rollup.config.js"
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx"
   ]
 }
 
