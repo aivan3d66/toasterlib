@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { IToastPropsType, Toast } from '../components/Toast'
 import { ToastsListContainer } from './ToastsListContainer'
 import { ToastsList } from '../components/ToastsList'
+import ErrorBoundary from '../components/ErrorBoundary'
 
 export class ToastManager {
   private readonly containerRef: HTMLElement | null
@@ -71,10 +72,12 @@ export class ToastManager {
 
     ReactDOM.render(
       <ToastsListContainer>
-        <ToastsList
-          toastsList={toastsList}
-          containerPosition={this.containerPosition}
-        />
+        <ErrorBoundary>
+          <ToastsList
+            toastsList={toastsList}
+            containerPosition={this.containerPosition}
+          />
+        </ErrorBoundary>
       </ToastsListContainer>,
       this.containerRef,
     )
