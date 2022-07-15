@@ -28,10 +28,9 @@ import ToastsList from './components/ToastsList/ToastsList'
 import ToastsListContainer from './containers/ToastsListContainer'
 import ToastsManager from './containers/ToastsManager'
 
-export default {
-  ErrorBoundary,
-  Toast,
-  ToastsList,
-  ToastsManager,
-  ToastsListContainer,
-}
+
+export { ErrorBoundary }
+export { Toast }
+export { ToastsList }
+export { ToastsManager }
+export { ToastsListContainer }
