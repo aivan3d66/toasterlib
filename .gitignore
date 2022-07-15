@@ -5,5 +5,5 @@
 .idea
 
 # production
-/dist
-README.md
+dist
+build
