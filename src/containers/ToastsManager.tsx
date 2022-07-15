@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { v4 as uuidv4 } from 'uuid'
-import { IToastPropsType, Toast } from '../components/Toast'
-import { ToastsListContainer } from './ToastsListContainer'
-import { ToastsList } from '../components/ToastsList'
+import Toast, { IToastPropsType } from '../components/Toast'
+
 import ErrorBoundary from '../components/ErrorBoundary'
+import ToastsListContainer from './ToastsListContainer'
+import ToastsList from '../components/ToastsList'
 
 export class ToastManager {
   private readonly containerRef: HTMLElement | null
