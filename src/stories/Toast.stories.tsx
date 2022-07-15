@@ -1,38 +1,31 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Toast } from '../components/Toast'
+import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Project/Components/Toast',
   component: Toast,
   argTypes: {
-    toastId: {
+    id: {
       title: 'Toast ID',
       description: 'Toast ID',
     },
     title: {
-      title: 'Toast name',
-      description: 'Toast name',
+      title: 'Toast title',
+      description: 'Toast title',
     },
     description: {
-      title: 'Toast text',
-      description: 'Toast text',
+      title: 'Toast description',
+      description: 'Toast description',
     },
     toastColor: {
       title: 'Toast background color',
       description: 'Toast background color',
     },
-    toastPosition: {
-      title: 'Toast position',
-      description: 'Toast position',
-    },
-    toastMargins: {
-      title: 'Toast margins',
-      description: 'Toast margins',
-    },
-    timeout: {
-      title: 'Toast timeout',
-      description: 'Toast timeout',
+    duration: {
+      title: 'Toast duration',
+      description: 'Toast duration',
     },
     animation: {
       title: 'Toast animation',
@@ -45,11 +38,10 @@ const Template: ComponentStory<typeof Toast> = (args) => <Toast {...args}/>
 
 export const ToastExample = Template.bind({})
 ToastExample.args = {
-  toastId: '1',
+  id: '1',
   status: 'ok',
-  animation: 'default',
-  timeout: 5000,
-  toastMargins: '20px',
-  toastColor: '#37E29A',
-  toastPosition: 'bottom-left',
+  description: 'Some description',
+  animation: 'transition',
+  duration: 5000,
+  deleteToast: action('Delete btn click!')
 }
