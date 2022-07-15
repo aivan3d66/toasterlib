@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/aivan3d66"
   },
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "React Toast library",
   "author": "aivan3d66",
   "license": "MIT",

@@ -6,6 +6,7 @@ import url from '@rollup/plugin-url'
 import commonjs from '@rollup/plugin-commonjs'
 // import alias from '@rollup/plugin-alias';
 import dts from "rollup-plugin-dts";
+import styled from 'styled-components';
 
 const packageJson = require("./package.json");
 
@@ -32,6 +33,8 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
     ],
+    external: ['styled-components'],
+    globals: { 'styled-components': 'styled' },
   },
   // {
   //   input: "dist/esm/types/index.d.ts",
