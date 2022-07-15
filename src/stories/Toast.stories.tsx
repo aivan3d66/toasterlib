@@ -1,6 +1,6 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Toast } from '../components/Toast'
+import { Toast } from '../components/Toast/Toast'
 import { action } from '@storybook/addon-actions'
 
 export default {
