@@ -35,7 +35,7 @@
   },
   "include": [
     "src",
-    "src/components",
+//    "src/components",
     "src/custom.d.ts"
   ],
   "exclude": [
