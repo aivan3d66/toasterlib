@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { ToastButton, ToastDescription, ToastIcon, ToastInfo, ToastTitle, ToastWrapper } from './component'
 import { VscChromeClose } from 'react-icons/vsc'
-import { ToastAnimationType, ToastStatusType } from '../../containers/ToastsManager'
+import { ToastAnimationType, ToastStatusType } from '../../containers/ToastManager/ToastsManager'
 import { DEFAULT_TOASTS } from '../../constants/constants'
 
 const Toast: React.FC<IToastPropsType> = (

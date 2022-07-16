@@ -1,15 +1,15 @@
-// import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary'
-// import Toast from './components/Toast/Toast'
-// import ToastsList from './components/ToastsList/ToastsList'
-// import ToastsListContainer from './containers/ToastsListContainer'
-// import ToastsManager from './containers/ToastsManager'
-//
-//
-// export { ErrorBoundary }
-// export { Toast }
-// export { ToastsList }
-// export { ToastsManager }
-// export { ToastsListContainer }
+import ErrorBoundary from "./components/ErrorBoundary";
+import Toast from "./components/Toast";
+import ToastsList from "./components/ToastsList";
+import { ToastsListContainer, ToastsManager } from "./containers";
 
-export * from './components'
-export * from './containers'
+export default {
+  ErrorBoundary,
+  Toast,
+  ToastsList,
+  ToastsManager,
+  ToastsListContainer
+}
+
+// export * from './components'
+// export * from './containers'

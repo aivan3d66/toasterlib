@@ -1,6 +1,6 @@
 import React from 'react'
 import { ToastsListWrapper } from './component'
-import { ContainerPositionType } from '../../containers/ToastsManager'
+import { ContainerPositionType } from '../../containers/ToastManager/ToastsManager'
 
 const ToastsList: React.FC<IToastListPropsType> = (
   {
