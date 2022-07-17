@@ -8,8 +8,7 @@
   "author": "aivan3d66",
   "license": "ISC",
   "repository": "aivan3d66/toasterlib",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.es.js",
+  "main": "dist/prod.js",
   "files": [
     "dist"
   ],
@@ -29,6 +28,7 @@
     "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.0",
+    "@rollup/plugin-eslint": "^8.0.2",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -43,9 +43,6 @@
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.25",
     "@types/uuid": "^8.3.4",
-    "rollup": "^2.76.0",
-    "rollup-plugin-dts": "^4.2.2",
-    "rollup-plugin-postcss": "^4.0.2",
     "babel-loader": "^8.2.5",
     "browserify": "latest",
     "eslint": "^6.6.0",
@@ -65,14 +62,21 @@
     "husky": "^8.0.1",
     "lint-staged": "^9.4.2",
     "prettier": "^2.7.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
-    "styled-components": "^5.3.5",
-    "uuid": "^8.3.2",
-    "typescript": "^4.7.4"
+    "rollup": "^2.76.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-generate-package-json": "^3.2.0",
+    "typescript": "^4.7.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "peerDependencies": {
-    "styled-components": ">= 5"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
   }
 }
