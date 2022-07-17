@@ -1,12 +1,11 @@
+import { IToastPropsType, Toast } from '@/components/Toast'
+import { ToastList } from '@/components/ToastsList'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { v4 as uuidv4 } from 'uuid'
-import Toast, { IToastPropsType } from '../../components/Toast/Toast'
+import { ToastListPortal } from '../ToastListPortal'
 
-import ToastsListContainer from '../ToastListContainer/ToastsListContainer'
-import ToastsList from '../../components/ToastsList/ToastsList'
-
-class ToastManager {
+export class ToastManager {
   private readonly containerRef: HTMLElement | null
   private toasts: Array<IToastPropsType> = []
   public containerPosition: ContainerPositionType
@@ -71,14 +70,12 @@ class ToastManager {
     ))
 
     ReactDOM.render(
-      <ToastsListContainer>
-
-          <ToastsList
-            toastsList={toastsList}
-            containerPosition={this.containerPosition}
-          />
-
-      </ToastsListContainer>,
+      <ToastListPortal>
+        <ToastList
+          toastsList={toastsList}
+          containerPosition={this.containerPosition}
+        />
+      </ToastListPortal>,
       this.containerRef,
     )
   }
@@ -105,5 +102,3 @@ interface ToastOptions {
   duration?: number,
   toastColor?: string,
 }
-
-export default ToastManager

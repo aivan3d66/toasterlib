@@ -1,10 +1,10 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 
-const body = document.getElementById('modal-root') as HTMLElement;
+const body = document.getElementById('modal-root') as HTMLElement
 
-class ToastsListContainer extends React.Component<{children?: React.ReactNode}> {
-  container: HTMLElement = document.createElement("div")
+export class ToastListPortal extends React.Component<{ children?: React.ReactNode }> {
+  container: HTMLElement = document.createElement('div')
 
   componentDidMount() {
     body.appendChild(this.container)
@@ -23,5 +23,3 @@ class ToastsListContainer extends React.Component<{children?: React.ReactNode}> 
     )
   }
 }
-
-export default ToastsListContainer

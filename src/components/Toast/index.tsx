@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { ToastButton, ToastDescription, ToastIcon, ToastInfo, ToastTitle, ToastWrapper } from './component'
 import { VscChromeClose } from 'react-icons/vsc'
-import { ToastAnimationType, ToastStatusType } from '../../containers/ToastManager/ToastsManager'
-import { DEFAULT_TOASTS } from '../../constants/constants'
+import DEFAULT_TOASTS from '@/constants/constants'
+import { ToastAnimationType, ToastStatusType } from '@/containers/ToastManager'
 
-const Toast: React.FC<IToastPropsType> = (
+export const Toast: React.FC<IToastPropsType> = (
   {
     animation,
     status,
@@ -72,5 +72,3 @@ export interface IToastPropsType {
   duration?: number;
   deleteToast: () => void;
 }
-
-export default Toast

@@ -2,7 +2,7 @@ import React from 'react'
 import { Component, ErrorInfo, ReactNode } from 'react'
 import { ErrorMessage } from './component'
 
-class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: '',
   }
@@ -31,5 +31,3 @@ interface Props {
 interface State {
   hasError: Object
 }
-
-export default ErrorBoundary
