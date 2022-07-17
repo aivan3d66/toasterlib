@@ -1,35 +1,35 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import Toast from '../components/Toast/Toast'
+import { Toast } from '@/components/Toast'
 
 export default {
-  title: 'Project/Components/Toast',
+  title: 'Project/Components/Index',
   component: Toast,
   argTypes: {
     id: {
-      title: 'Toast ID',
-      description: 'Toast ID',
+      title: 'Index ID',
+      description: 'Index ID',
     },
     title: {
-      title: 'Toast title',
-      description: 'Toast title',
+      title: 'Index title',
+      description: 'Index title',
     },
     description: {
-      title: 'Toast description',
-      description: 'Toast description',
+      title: 'Index description',
+      description: 'Index description',
     },
     toastColor: {
-      title: 'Toast background color',
-      description: 'Toast background color',
+      title: 'Index background color',
+      description: 'Index background color',
     },
     toastMargins: {
-      title: 'Toast margins',
-      description: 'Toast margins',
+      title: 'Index margins',
+      description: 'Index margins',
     },
     animation: {
-      title: 'Toast animation',
-      description: 'Toast animation',
+      title: 'Index animation',
+      description: 'Index animation',
     },
   },
 } as ComponentMeta<typeof Toast>
