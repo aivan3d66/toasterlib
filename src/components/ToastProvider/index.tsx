@@ -1,11 +1,18 @@
-import React, { useContext, useMemo } from 'react'
+import React, { ContextType, useContext, useMemo } from 'react'
 import { useToasts } from '@/hooks/useToast'
+import { IToastPropsType } from '@/components/Toast'
 
-export const ToastContext = React.createContext<any>(() => {
+interface IToastContext {
+  showToast: Function,
+  toasts: Array<IToastPropsType>,
+  removeToast: (toastId: string) => void,
+}
+
+export const ToastContext = React.createContext<ContextType<any>>(() => {
 })
 
 export const ToastProvider: React.FC<ToastProviderPropsType> = ({ children }) => {
-  const { showToast, toasts, removeToast } = useToasts()
+  const { showToast, toasts, removeToast }: IToastContext = useToasts()
 
   const values = useMemo(
     () => ({

@@ -1,10 +1,10 @@
 import { IToastPropsType } from '@/components/Toast'
 import { ToastStatusType } from '@/types'
-import { useState } from 'react'
+import { SetStateAction, useState } from 'react'
 // @ts-ignore
 import { v4 as uuidv4 } from 'uuid'
 
-export const useToasts = (): UseToastReturnType => {
+export const useToasts = () => {
   const [toasts, setToasts] = useState<Array<IToastPropsType>>([])
 
   const showToast = (
@@ -14,11 +14,11 @@ export const useToasts = (): UseToastReturnType => {
       status,
       duration = 3,
     }: ShowToastArgsType,
-  ): any => {
-    const setToastId = uuidv4()
+  ): UseToastReturnType | any => {
+    const setToastId: string = uuidv4()
 
-    setToasts((currentState: any) => [
-      ...currentState,
+    setToasts((currentState: SetStateAction<Array<IToastPropsType>>) => [
+      ...currentState as any,
       {
         description,
         title,
