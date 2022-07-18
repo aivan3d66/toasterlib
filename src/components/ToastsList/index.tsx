@@ -2,6 +2,7 @@ import React from 'react'
 import { ToastsListWrapper } from './component'
 import { ToastContainerPositionType } from '@/types'
 import { getContainerPosition } from '@/helpers/getContainerPosition'
+import { ErrorBoundary } from '../ErrorBoundary'
 
 export const ToastList: React.FC<IToastListPropsType> = (
   {
@@ -13,7 +14,9 @@ export const ToastList: React.FC<IToastListPropsType> = (
 
   return (
     <ToastsListWrapper style={position}>
-      {children}
+      <ErrorBoundary>
+        {children}
+      </ErrorBoundary>
     </ToastsListWrapper>
   )
 }
