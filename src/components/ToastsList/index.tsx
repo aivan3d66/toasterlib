@@ -1,6 +1,7 @@
 import React from 'react'
 import { ToastsListWrapper } from './component'
-import { PositionValuesType } from '@/types'
+import { ToastContainerPositionType } from '@/types'
+import { getContainerPosition } from '@/helpers/getContainerPosition'
 
 export const ToastList: React.FC<IToastListPropsType> = (
   {
@@ -8,14 +9,16 @@ export const ToastList: React.FC<IToastListPropsType> = (
     children,
   },
 ) => {
+  const position = getContainerPosition(containerPosition)
+
   return (
-    <ToastsListWrapper style={containerPosition}>
+    <ToastsListWrapper style={position}>
       {children}
     </ToastsListWrapper>
   )
 }
 
 export interface IToastListPropsType {
-  containerPosition: PositionValuesType,
+  containerPosition: ToastContainerPositionType,
   children?: React.ReactNode
 }
