@@ -5,13 +5,5 @@
   "singleQuote": true,
   "trailingComma": "all",
   "parser": "babel",
-  "bracketSpacing": true,
-  "importOrder": [
-    "^@/(.*)$",
-    "^@server/(.*)$",
-    "^@ui/(.*)$",
-    "^[./]"
-  ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "bracketSpacing": true
 }
