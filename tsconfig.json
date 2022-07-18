@@ -15,15 +15,21 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
+    "types": [
+      "cypress",
+      "node"
+    ],
+    "baseUrl": "@",
     "paths": {
       "@/*": [
         "src/*"
-      ]
-    }
+      ],
+    },
   },
   "include": [
     "src/**/*",
-    "src/custom.d.ts"
+    "src/custom.d.ts",
+    "**/*.ts"
   ],
   "exclude": [
     "node_modules",
