@@ -1,21 +1,21 @@
-import { ContainerPositionType } from '@/containers/ToastManager'
 import React from 'react'
 import { ToastsListWrapper } from './component'
+import { PositionValuesType } from '@/types'
 
 export const ToastList: React.FC<IToastListPropsType> = (
   {
     containerPosition,
-    toastsList,
+    children,
   },
 ) => {
   return (
     <ToastsListWrapper style={containerPosition}>
-      {toastsList}
+      {children}
     </ToastsListWrapper>
   )
 }
 
 export interface IToastListPropsType {
-  containerPosition: ContainerPositionType,
-  toastsList: Array<JSX.Element>
+  containerPosition: PositionValuesType,
+  children?: React.ReactNode
 }
