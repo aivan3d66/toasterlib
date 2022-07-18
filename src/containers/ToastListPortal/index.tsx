@@ -10,9 +10,10 @@ export const ToastListPortal: React.FC<ToastPortalPropsType> = React.memo((
   {
     position,
     animation,
+    toasts
   },
 ) => {
-  const { removeToast, toasts } = useShowToast()
+  const { removeToast } = useShowToast()
   const { isLoad, portalContainer } = usePortal()
   const visibleToasts: Array<IToastPropsType> = useMemo(() => toasts.slice(0, 3), [toasts])
 
@@ -46,4 +47,5 @@ export const ToastListPortal: React.FC<ToastPortalPropsType> = React.memo((
 type ToastPortalPropsType = {
   position: ToastContainerPositionType,
   animation: ToastAnimationType,
+  toasts: Array<IToastPropsType>
 }
