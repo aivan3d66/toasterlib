@@ -1,8 +1,17 @@
 import React, { useEffect } from 'react'
-import { ToastButton, ToastDescription, ToastIcon, ToastInfo, ToastTitle, ToastWrapper } from './component'
-import { VscChromeClose } from 'react-icons/vsc'
+import {
+  ToastButton,
+  ToastDescription,
+  ToastIconWrapper,
+  ToastInfo,
+  ToastTitle,
+  ToastWrapper,
+} from './component'
 import DEFAULT_TOASTS from '@/constants/constants'
-import { ToastAnimationType, ToastStatusType } from '@/containers/ToastManager'
+import { ToastAnimationType, ToastStatusType } from '@/types'
+import { ToastIcon } from './ToastIcon'
+import IconClose from '@/assets/svg/iconClose.svg'
+
 
 export const Toast: React.FC<IToastPropsType> = (
   {
@@ -47,15 +56,15 @@ export const Toast: React.FC<IToastPropsType> = (
       color={currentAnimation}
       style={currentToastStyles}
     >
-      <ToastIcon>
-        <img src={currentToastProperties.icon} alt='current toast icon' />
-      </ToastIcon>
+      <ToastIconWrapper>
+        <ToastIcon icon={currentToastProperties.icon}/>
+      </ToastIconWrapper>
       <ToastInfo>
         <ToastTitle>{title ? title : currentToastProperties.title}</ToastTitle>
         {description && <ToastDescription>{description}</ToastDescription>}
       </ToastInfo>
       <ToastButton onClick={deleteToast} theme={currentToastProperties}>
-        <VscChromeClose />
+        <IconClose />
       </ToastButton>
     </ToastWrapper>
   )
