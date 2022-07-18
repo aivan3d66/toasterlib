@@ -29,7 +29,7 @@ export default [{
     svgr(),
     commonjs(),
     babel({
-      extensions: ['.jsx', '.js', '.ts', '.tsx'],
+      extensions: ['.jsx', '.js', '.ts', '.tsx', '.cy.ts'],
       exclude: 'node_modules/**',
       presets: ['@babel/preset-react'],
     }),
