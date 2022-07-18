@@ -6,7 +6,12 @@
   "trailingComma": "all",
   "parser": "babel",
   "bracketSpacing": true,
-  "importOrder": ["^@/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+  "importOrder": [
+    "^@/(.*)$",
+    "^@server/(.*)$",
+    "^@ui/(.*)$",
+    "^[./]"
+  ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
 }
