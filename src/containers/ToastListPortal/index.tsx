@@ -13,9 +13,8 @@ export const ToastListPortal: React.FC<ToastPortalPropsType> = React.memo((
   },
 ) => {
   const { removeToast, toasts } = useShowToast()
-  const visibleToasts: Array<IToastPropsType> = useMemo(() => toasts.slice(0, 3), [toasts])
-
   const { isLoad, portalContainer } = usePortal()
+  const visibleToasts: Array<IToastPropsType> = useMemo(() => toasts.slice(0, 3), [toasts])
 
   return isLoad
     ? ReactDOM.createPortal(
@@ -23,7 +22,6 @@ export const ToastListPortal: React.FC<ToastPortalPropsType> = React.memo((
         {
           visibleToasts.map(({ status, id, description, title, duration }) => {
               const deleteToastHandler = () => removeToast(id)
-
               return (
                 <Toast
                   key={id}
