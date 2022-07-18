@@ -58,6 +58,10 @@ export const ToastWrapper = styled.div`
   box-sizing: border-box;
   animation-name: ${({ color }) => color === 'flip' ? flip : color === 'zoomIn' ? zoomIn : transition};
   animation-duration: 1s;
+
+  svg {
+    fill: ${({ theme }) => theme.textColor};
+  }
 `
 
 export const ToastIconWrapper = styled.div`
@@ -68,8 +72,8 @@ export const ToastIconWrapper = styled.div`
 
 export const ToastButton = styled.button`
   margin: 0 0 auto 0;
+  width: 44px;
   color: ${({ theme }) => theme.textColor};
-  font-size: 26px;
   background-color: transparent;
   border: none;
   cursor: pointer;
