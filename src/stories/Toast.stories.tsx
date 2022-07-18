@@ -7,10 +7,6 @@ export default {
   title: 'Project/Components/Toast',
   component: Toast,
   argTypes: {
-    id: {
-      title: 'Toast ID',
-      description: 'Index ID',
-    },
     title: {
       title: 'Toast title',
       description: 'Index title',
@@ -38,7 +34,6 @@ const Template: ComponentStory<typeof Toast> = (args) => <Toast {...args}/>
 
 export const ToastExample = Template.bind({})
 ToastExample.args = {
-  id: '1',
   status: 'ok',
   description: 'Some description',
   animation: 'transition',
