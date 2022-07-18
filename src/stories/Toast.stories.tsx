@@ -4,31 +4,31 @@ import { action } from '@storybook/addon-actions'
 import { Toast } from '@/components/Toast'
 
 export default {
-  title: 'Project/Components/Index',
+  title: 'Project/Components/Toast',
   component: Toast,
   argTypes: {
     id: {
-      title: 'Index ID',
+      title: 'Toast ID',
       description: 'Index ID',
     },
     title: {
-      title: 'Index title',
+      title: 'Toast title',
       description: 'Index title',
     },
     description: {
-      title: 'Index description',
+      title: 'Toast description',
       description: 'Index description',
     },
     toastColor: {
-      title: 'Index background color',
+      title: 'Toast background color',
       description: 'Index background color',
     },
     toastMargins: {
-      title: 'Index margins',
+      title: 'Toast margins',
       description: 'Index margins',
     },
     animation: {
-      title: 'Index animation',
+      title: 'Toast animation',
       description: 'Index animation',
     },
   },
