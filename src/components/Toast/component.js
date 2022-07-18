@@ -60,13 +60,10 @@ export const ToastWrapper = styled.div`
   animation-duration: 1s;
 `
 
-export const ToastIcon = styled.div`
+export const ToastIconWrapper = styled.div`
   margin: 0 40px 0 0;
-
-  img {
-    width: 44px;
-    height: auto;
-  }
+  width: 44px;
+  height: auto;
 `
 
 export const ToastButton = styled.button`
