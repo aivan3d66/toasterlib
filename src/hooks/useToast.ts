@@ -6,7 +6,6 @@ import { v4 as uuidv4 } from 'uuid'
 
 export const useToasts = (): UseToastReturnType => {
   const [toasts, setToasts] = useState<Array<IToastPropsType>>([])
-  const setToastId = uuidv4()
 
   const showToast = (
     {
@@ -16,6 +15,8 @@ export const useToasts = (): UseToastReturnType => {
       duration = 3,
     }: ShowToastArgsType,
   ): any => {
+    const setToastId = uuidv4()
+
     setToasts((currentState: any) => [
       ...currentState,
       {
@@ -23,7 +24,7 @@ export const useToasts = (): UseToastReturnType => {
         title,
         status,
         duration,
-        toastId: setToastId,
+        id: setToastId,
       },
     ])
   }
