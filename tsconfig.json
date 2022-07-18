@@ -19,10 +19,10 @@
       "cypress",
       "node"
     ],
-    "baseUrl": "@",
+    "baseUrl": "./",
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ],
     },
   },
