@@ -1,13 +1,22 @@
-describe('empty spec', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io')
+// import { composeStories } from '@storybook/testing-react'
+// import * as stories from './../../src/stories/Toast.stories'
+// import { mount } from "@cypress/react";
+//
+// const { ToastExample } = composeStories(stories)
+
+describe('Storybook Toast story', () => {
+  it('story is open', () => {
+    cy
+      .visit('http://localhost:6006/?path=/story/project-components-toast--toast-example')
   })
+  // it('story Toast is mount', () => {
+  //   mount(typeof ToastExample)
+  // })
 })
 
-describe('ToastsList', () => {
-  it('toasts list is visible', () => {
+describe('Storybook ToastListPortal story', () => {
+  it('story is open', () => {
     cy
-      .visit('/')
-      .get('#modal-root').should('be.visible')
+      .visit('http://localhost:6006/?path=/story/project-components-toastportal--toast-list-portal-example')
   })
 })
