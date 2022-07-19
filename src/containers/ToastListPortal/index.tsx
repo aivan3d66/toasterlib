@@ -44,7 +44,7 @@ export const ToastListPortal: React.FC<ToastPortalPropsType> = React.memo((
     : null
 })
 
-type ToastPortalPropsType = {
+export type ToastPortalPropsType = {
   position: ToastContainerPositionType,
   animation: ToastAnimationType,
   toasts: Array<IToastPropsType>
