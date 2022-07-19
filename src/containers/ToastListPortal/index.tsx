@@ -31,7 +31,7 @@ export const ToastListPortal: React.FC<ToastPortalPropsType> = React.memo((
                   description={description}
                   title={title}
                   animation={animation}
-                  deleteToast={deleteToastHandler}
+                  removeToast={deleteToastHandler}
                   duration={duration}
                 />
               )

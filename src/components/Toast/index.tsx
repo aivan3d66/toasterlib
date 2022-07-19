@@ -19,7 +19,7 @@ export const Toast: React.FC<IToastPropsType> = (
     status,
     toastColor,
     toastMargins,
-    deleteToast,
+    removeToast,
     description,
     title,
     duration = 0,
@@ -29,11 +29,11 @@ export const Toast: React.FC<IToastPropsType> = (
     if (!duration) return
 
     const timer = setTimeout(() => {
-      deleteToast()
+      removeToast()
     }, duration)
 
     return () => clearTimeout(timer)
-  }, [deleteToast, duration])
+  }, [removeToast, duration])
 
   const currentToastProperties =
     status === 'err'
@@ -63,7 +63,7 @@ export const Toast: React.FC<IToastPropsType> = (
         <ToastTitle>{title ? title : currentToastProperties.title}</ToastTitle>
         {description && <ToastDescription>{description}</ToastDescription>}
       </ToastInfo>
-      <ToastButton onClick={deleteToast} theme={currentToastProperties}>
+      <ToastButton onClick={removeToast} theme={currentToastProperties}>
         <IconClose />
       </ToastButton>
     </ToastWrapper>
@@ -79,5 +79,5 @@ export interface IToastPropsType {
   toastColor?: string,
   animation?: ToastAnimationType,
   duration?: number;
-  deleteToast: () => void;
+  removeToast: () => void;
 }
