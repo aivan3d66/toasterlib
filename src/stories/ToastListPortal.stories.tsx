@@ -1,7 +1,7 @@
 import React from 'react'
-import { ToastListPortal } from '@/containers/ToastListPortal'
+import { ToastListPortal, ToastPortalPropsType } from '@/containers/ToastListPortal'
 import { ToastProvider, useShowToast } from '@/components/ToastProvider'
-import { ComponentMeta } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 export default {
   title: 'Project/Components/ToastPortal',
@@ -10,7 +10,6 @@ export default {
     position: {
       title: 'Container position',
       description: 'Container position',
-      defaultValue: 'top-right'
     },
     animation: {
       title: 'Toast animation',
@@ -18,42 +17,57 @@ export default {
     },
     toasts: {
       title: 'Toasts list',
-      description: 'Toast animation',
-    }
-  }
+      description: 'Toasts list',
+    },
+  },
 } as ComponentMeta<typeof ToastListPortal>
 
-const ToastList = () => {
-  const { showToast, toasts } = useShowToast();
+const ToastList: React.FC<ToastPortalPropsType> = (args) => {
+  const { showToast, toasts } = useShowToast()
   const showToastHandler = () => {
     showToast({
       status: 'ok',
       description: `Operation successful`,
-      duration: 10000
+      duration: 10000,
     })
   }
 
   return (
     <>
-      <ToastListPortal position={'top-right'} animation={'flip'} toasts={toasts}/>
+      <ToastListPortal
+        position={args.position}
+        animation={args.animation}
+        toasts={toasts}
+      />
       <button
         type='button'
         onClick={showToastHandler}
+        style={{
+          width: '100px',
+          padding: '10px',
+          color: '#ffffff',
+          backgroundColor: '#37E29A',
+          border: '1px solid transparent',
+          boxShadow: '4px 4px 8px #00000029',
+          cursor: 'pointer',
+        }}
       >
-        add Toast
+        Show Toast
       </button>
     </>
-  );
-};
+  )
+}
 
-export const ToastListPortalExample = () => (
+const Template: ComponentStory<typeof ToastList> = (args) => (
   <ToastProvider>
-      <ToastList />
+    <ToastList {...args} />
   </ToastProvider>
-);
+)
+
+export const ToastListPortalExample = Template.bind({})
 ToastListPortalExample.args = {
-  position: 'top-right',
-  animation: 'flip'
-};
+  position: 'bottom-left',
+  animation: 'flip',
+}
 
 

@@ -37,5 +37,5 @@ ToastExample.args = {
   status: 'ok',
   description: 'Some description',
   animation: 'transition',
-  deleteToast: action('Delete btn click!')
+  removeToast: action('Delete btn click!')
 }
