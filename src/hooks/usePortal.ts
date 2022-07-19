@@ -5,14 +5,14 @@ export const usePortal = () => {
   const portalContainer: string = 'modal-root'
 
   useEffect(() => {
-    const div: any = document.createElement('div')
+    const div = document.createElement('div') as any
     div.id = portalContainer
 
     document.getElementsByTagName('body')[0].appendChild(div)
     setIsLoad(true)
 
     return () => document.getElementsByTagName('body')[0].removeChild(div)
-  }, [portalContainer])
+  }, [])
 
   return { isLoad, portalContainer }
 }
